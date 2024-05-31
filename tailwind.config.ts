@@ -24,6 +24,9 @@ const config = {
         primary: "#52b788",
         danger: "#d00000",
       },
+      fontFamily: {
+        LT: "LT Eyesight",
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },

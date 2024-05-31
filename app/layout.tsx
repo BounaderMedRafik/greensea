@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/layout/Navigation";
+import LenisProvider from "@/components/providers/LenisProv";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +22,10 @@ export default function RootLayout({
         <div>
           <Navigation />
         </div>
-        {children}
+        <LenisProvider>
+          <div className=" mt-20">{children}</div>
+        </LenisProvider>
+        <div className="h-screen"></div>
       </body>
     </html>
   );
