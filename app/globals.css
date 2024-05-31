@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .wrapper {
+    @apply max-w-7xl mx-auto p-4;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text;
+  }
+}
