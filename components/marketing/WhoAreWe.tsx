@@ -1,8 +1,31 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
-import Image from "next/image";
-import pic1 from "@/public/placeholding/pic1.jpg";
+import TeamCard from "./TeamCard";
+
+const TeamMem = [
+  {
+    name: "Bounader Med Rafik",
+    role: "Web Developper",
+    age: 19,
+    instaLink: "https://www.instagram.com/bounaderrafik/",
+    twitterLink: "https://twitter.com/bwnadrrr",
+    linkedInLink: "https://www.linkedin.com/in/bounader-med-rafik/",
+    portfolioLink: "https://bounaderrafik-personal-blog.vercel.app/",
+    picture: "/placeholding/pic1.jpg",
+    MainPicture: "/Mainpictures/rafik.png",
+  },
+  {
+    name: "Lamri Siradj",
+    role: "Photographer",
+    age: 19,
+    instaLink: "https://www.instagram.com/bounaderrafik/",
+    twitterLink: "https://twitter.com/bwnadrrr",
+    linkedInLink: "https://www.linkedin.com/in/bounader-med-rafik/",
+    picture: "/placeholding/pic1.jpg",
+    MainPicture: "/Mainpictures/rafik.png",
+  },
+];
 
 const WhoAreWe = () => {
   const ref = useRef(null);
@@ -49,11 +72,88 @@ const Details = () => {
             eveniet rem nobis.
           </div>
           <div className="mt-4">
-            <div className=" grid grid-cols-3 grid-rows-3 gap-1">
-              <div className=" w-full h-40 col-span-2 bg-white/10 border border-white"></div>
-              <div className=" w-full h-40 col-span-1 bg-white/10 border border-white"></div>
-              <div className=" w-full h-full col-span-1 row-span-2 bg-white/10 border border-white"></div>
-              <div className=" w-full h-40 col-span-1  bg-white/10 border border-white"></div>
+            <div className=" flex flex-col md:grid grid-cols-3 grid-rows-3 gap-1">
+              <motion.div
+                style={{ filter: "grayscale(100%)" }}
+                whileHover={{
+                  scale: 1.05,
+                  rotate: "2deg",
+                  filter: "grayscale(0%)",
+                }}
+                className=" w-full h-40   md:col-span-2 bg-white/10 border border-white/20 rounded-lg overflow-hidden"
+              >
+                <img
+                  className="w-full h-full object-cover"
+                  src="/placeholding/pic1.jpg"
+                  alt=""
+                />
+              </motion.div>
+              <motion.div
+                style={{ filter: "grayscale(100%)" }}
+                whileHover={{
+                  scale: 1.05,
+                  rotate: "-2deg",
+                  filter: "grayscale(0%)",
+                }}
+                className=" w-full h-40 col-span-1 bg-white/10 border border-white/20 rounded-lg overflow-hidden"
+              >
+                <img
+                  className="w-full h-full object-cover"
+                  src="/placeholding/pic2.jpg"
+                  alt=""
+                />
+              </motion.div>
+              <motion.div
+                style={{ filter: "grayscale(100%)" }}
+                whileHover={{
+                  scale: 1.05,
+                  rotate: "-2deg",
+                  filter: "grayscale(0%)",
+                }}
+                className=" w-full h-full col-span-1 row-span-2 bg-white/10 border border-white/20 rounded-lg overflow-hidden"
+              >
+                <img
+                  className="w-full h-full object-cover"
+                  src="/placeholding/pic2.jpg"
+                  alt=""
+                />
+              </motion.div>
+              <motion.div
+                style={{ filter: "grayscale(100%)" }}
+                whileHover={{
+                  scale: 1.05,
+                  rotate: "2deg",
+                  filter: "grayscale(0%)",
+                }}
+                className=" w-full h-40 col-span-1  bg-white/10 border border-white/20 rounded-lg overflow-hidden"
+              >
+                <img
+                  className="w-full h-full object-cover"
+                  src="/placeholding/pic2.jpg"
+                  alt=""
+                />
+              </motion.div>
+            </div>
+            {/* TeamMembers */}
+            <div className="mt-24">
+              <div className="text-5xl font-LT ">GreenSea Team</div>
+              <div className="mt-2">
+                {TeamMem.map((item, i) => (
+                  <div className="mt-4" key={i}>
+                    <TeamCard
+                      Mainpic={item.MainPicture}
+                      pic={item.picture}
+                      name={item.name}
+                      age={item.age}
+                      role={item.role}
+                      twitterLink={item.twitterLink}
+                      InstaLink={item.instaLink}
+                      LinkedinLink={item.linkedInLink}
+                      Portfolio={item.portfolioLink}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

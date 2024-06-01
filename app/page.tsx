@@ -5,10 +5,7 @@ export default function Home() {
   return (
     <main className="">
       <Hero />
-      <Paragraph
-        text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque iusto
-        accusamus, eaque illum beatae omnis."
-      />
+      <Paragraph text="We craft unique digital experiences for businesses, bringing your ideas to life with creativity and innovation. Explore the possibilities with us." />
       <WhoAreWe />
     </main>
   );
