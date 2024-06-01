@@ -43,7 +43,11 @@ const Navigation = () => {
         }}
         className="wrapper flex items-center justify-between bg-background z-50 fixed w-full top-0 left-1/2 -translate-x-1/2"
       >
-        <div className="text-xl">GreenSea</div>
+        <div className="text-xl">
+          <div className=" font-LT">
+            GreenSea <span className=" text-xs font-light">2024</span>
+          </div>
+        </div>
         <div className="flex items-center gap-2">
           {links.map((item, i) => (
             <div key={i}>
