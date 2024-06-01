@@ -3,6 +3,7 @@ import {
   AppWindowIcon,
   ArrowRight,
   InstagramIcon,
+  Linkedin,
   LinkedinIcon,
   Smile,
   StickerIcon,
@@ -26,6 +27,7 @@ const TeamCard = ({
   InstaLink,
   LinkedinLink,
   Portfolio,
+  MessageForFun,
 }: {
   name: string;
   age: number;
@@ -36,6 +38,7 @@ const TeamCard = ({
   InstaLink: string;
   LinkedinLink: string;
   Portfolio?: string;
+  MessageForFun: string;
 }) => {
   const socials = [
     {
@@ -50,7 +53,7 @@ const TeamCard = ({
     },
     {
       name: "LinkedIn",
-      icon: <LinkedinIcon fill="white" />,
+      icon: <Linkedin fill="white" />,
       link: LinkedinLink,
     },
   ];
@@ -66,14 +69,18 @@ const TeamCard = ({
   return (
     <div className="w-full group overflow-hidden h-96 p-5 bg-text/10 border border-text/20 rounded-xl relative">
       <img
-        className=" size-60 opacity-0 group-hover:opacity-100 duration-500 hover:scale-105 transition-all hidden md:block z-20 object-cover absolute top-1/2 -translate-y-1/2 right-24 rounded-full border-text/20 shadow-xl shadow-white/10 border"
+        className=" size-60 opacity-0 peer group-hover:opacity-100 duration-500 hover:scale-105 transition-all hidden md:block z-20 object-cover absolute top-1/2 -translate-y-1/2 right-24 rounded-full border-text/20 shadow-xl shadow-white/10 border"
         src={Mainpic}
       />
+      <div className=" absolute top-24 peer-hover:scale-125 peer-hover:px-8  peer-hover:opacity-100 opacity-0 duration-500 group-hover:opacity-75 backdrop-blur-sm transition-all right-24 bg-white z-20 px-5 py-1 rounded-full text-background">
+        {MessageForFun}
+      </div>
+
       <img
         className="absolute grayscale group-hover:grayscale-0 group-hover:scale-105  transition-all  h-full w-full top-0 left-0 object-cover"
         src={pic}
       />
-      <div className=" bg-gradient-to-t from-background from-10% via-transparent to-background absolute z-10 w-full h-full top-0 left-0"></div>
+      <div className=" bg-gradient-to-t from-background  via-transparent to-background absolute z-10 w-full h-full top-0 left-0"></div>
       <div className="absolute z-20 top-5 left-5 ">
         <div className="text-2xl md:text-4xl font-LT">
           {name} <span className="text-sm">{age}</span>

@@ -14,16 +14,7 @@ const TeamMem = [
     portfolioLink: "https://bounaderrafik-personal-blog.vercel.app/",
     picture: "/placeholding/pic1.jpg",
     MainPicture: "/Mainpictures/rafik.png",
-  },
-  {
-    name: "Lamri Siradj",
-    role: "Photographer",
-    age: 19,
-    instaLink: "https://www.instagram.com/bounaderrafik/",
-    twitterLink: "https://twitter.com/bwnadrrr",
-    linkedInLink: "https://www.linkedin.com/in/bounader-med-rafik/",
-    picture: "/placeholding/pic1.jpg",
-    MainPicture: "/Mainpictures/rafik.png",
+    Message: "lowkey?",
   },
 ];
 
@@ -60,9 +51,21 @@ const Details = () => {
   return (
     <>
       <div ref={ref} className="py-10 relative">
-        <div className="px-10">
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          whileInView={{
+            opacity: 1,
+          }}
+          transition={{
+            duration: 0.5,
+            ease: "anticipate",
+          }}
+          className="px-10"
+        >
           <div className="text-5xl font-LT ">Who are we?</div>
-          <div className=" font-light mt-2 ">
+          <div className="text-xs md:text-base font-light mt-2 ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Necessitatibus neque excepturi consequuntur, aliquam deserunt
             soluta, incidunt amet dolorem, expedita et consequatur facere
@@ -135,12 +138,24 @@ const Details = () => {
               </motion.div>
             </div>
             {/* TeamMembers */}
-            <div className="mt-24">
+            <motion.div
+              initial={{
+                opacity: 0,
+              }}
+              whileInView={{
+                opacity: 1,
+              }}
+              transition={{
+                delay: 0.5,
+              }}
+              className="mt-24"
+            >
               <div className="text-5xl font-LT ">GreenSea Team</div>
               <div className="mt-2">
                 {TeamMem.map((item, i) => (
                   <div className="mt-4" key={i}>
                     <TeamCard
+                      MessageForFun={item.Message}
                       Mainpic={item.MainPicture}
                       pic={item.picture}
                       name={item.name}
@@ -154,9 +169,9 @@ const Details = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
         <motion.div
           style={{
             scaleY: scaleY,
