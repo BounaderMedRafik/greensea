@@ -65,7 +65,7 @@ const Details = () => {
           className="px-10"
         >
           <div className="text-5xl font-LT ">Who are we?</div>
-          <div className="text-xs md:text-base font-light mt-2 ">
+          <div className="text-xs md:text-base font-thin mt-2 ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Necessitatibus neque excepturi consequuntur, aliquam deserunt
             soluta, incidunt amet dolorem, expedita et consequatur facere

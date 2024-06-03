@@ -1,103 +1,119 @@
-import {
-  Facebook,
-  Instagram,
-  Leaf,
-  Phone,
-  PhoneCall,
-  PhoneIcon,
-  PhoneIncoming,
-  Youtube,
-} from "lucide-react";
+"use client";
 import React from "react";
 import { Button } from "../ui/button";
-import { Label } from "../ui/label";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { buttonVariants } from "@/components/ui/button";
+import { Label } from "@radix-ui/react-label";
 import { Input } from "../ui/input";
-
-const socials = [
-  {
-    name: <Instagram size={20} />,
-    link: "#yeh",
-  },
-  {
-    name: <Facebook size={20} />,
-    link: "#yeh",
-  },
-  {
-    name: <Youtube size={20} />,
-    link: "#yeh",
-  },
-];
+import { toast } from "../ui/use-toast";
+import { motion } from "framer-motion";
 
 const ContactUs = () => {
   return (
     <div className="wrapper">
       <div>
-        <div className="text-5xl font-LT flex items-center justify-between ">
-          <div>Reach us now!</div>
-          <div>
-            <div className="flex items-center">
-              {socials.map((item, i) => (
-                <div key={i}>
-                  <a target="_blank" href={item.link}>
-                    <Button variant={"link"} size={"icon"}>
-                      {item.name}
+        <div className="text-4xl text-center font-LT">Contact us</div>
+        <div className="mt-2 text-sm font-thin text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id reiciendis
+          aspernatur odit!
+        </div>
+        <div className="w-full flex items-center justify-center mt-4">
+          <img className=" max-w-xl" src="/illustrations/contact.svg" alt="" />
+        </div>
+      </div>
+      <div className="mt-10 w-full gap-3 flex items-center justify-center">
+        <div>
+          <Dialog>
+            <DialogTrigger>
+              <div
+                className={buttonVariants({
+                  variant: "default",
+                  size: "wide",
+                })}
+              >
+                Let&apos;s Start
+              </div>
+            </DialogTrigger>
+            <DialogContent>
+              <div className="text-4xl font-LT">Contact us</div>
+              <div className=" mt-2">Lorem ipsum dolor sit amet.</div>
+              <div className="text-sm font-thin ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Provident tenetur possimus quas.
+              </div>
+              <div className="mt-5">
+                <form action="">
+                  <div>
+                    <Label htmlFor="name">Full Name</Label>
+                    <Input
+                      required
+                      placeholder="Jhonson lmao"
+                      name="name"
+                      id="name"
+                      className="mt-1"
+                    />
+                  </div>
+                  <div className="mt-5">
+                    <Label htmlFor="cn">Company Name</Label>
+                    <Input
+                      required
+                      placeholder="wlad ljudj"
+                      name="cn"
+                      id="cn"
+                      className="mt-1"
+                    />
+                  </div>
+                  <div className="mt-5">
+                    <Label htmlFor="email">Email</Label>
+                    <Input
+                      required
+                      placeholder="companyxyz@mail.com"
+                      name="email"
+                      id="email"
+                      className="mt-1"
+                    />
+                  </div>
+                  <div className="mt-5">
+                    <Label htmlFor="phone">Phone number</Label>
+                    <Input
+                      required
+                      placeholder="0658 48 52 95"
+                      name="phone"
+                      id="phone"
+                      className="mt-1"
+                    />
+                  </div>
+                  <motion.div
+                    initial={{
+                      opacity: 0,
+                    }}
+                    animate={{
+                      opacity: 1,
+                    }}
+                    transition={{
+                      duration: 0.5,
+                      delay: 0.5,
+                    }}
+                    className="mt-7"
+                  >
+                    <Button
+                      size={"wide"}
+                      type="submit"
+                      onClick={() => {
+                        toast({
+                          title: "Submitted succusfully",
+                        });
+                      }}
+                    >
+                      Submit
                     </Button>
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
+                  </motion.div>
+                </form>
+              </div>
+            </DialogContent>
+          </Dialog>
         </div>
-      </div>
-      <div>
-        <div className="flex items-start mt-10 gap-5">
-          <div className="w-1/2  h-full">
-            <div className="text-3xl font-LT">Contact informations</div>
-            <div className="text-sm font-light mt-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium architecto non dignissimos.
-            </div>
-            <Myinformation />
-          </div>
-          <div className="w-1/2 overflow-hidden border border-text/20 rounded-lg ">
-            <img
-              className=" w-full h-full object-cover object-center"
-              src="/placeholding/pic1.jpg"
-              alt=""
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const Myinformation = ({
-  label,
-  info,
-  icon,
-}: {
-  label: string;
-  info: string;
-  icon: JSX.Element;
-}) => {
-  const information = info;
-
-  return (
-    <div className="mt-5">
-      <div>
-        <Label>
-          <div className="flex items-center gap-2">
-            <div>{icon}</div>
-            <div className="text-xl">{label}</div>
-          </div>
-        </Label>
-        <div className="w-full text-sm font-light bg-text/20 border-b border-b-text/50 p-2">
-          <div>+234 812 345 6789</div>
-          <div>
-            <Button>Copy</Button>
-          </div>
-        </div>
+        <Button variant={"white"}>another action btn</Button>
       </div>
     </div>
   );
