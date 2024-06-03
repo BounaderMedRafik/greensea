@@ -27,7 +27,7 @@ export default function RootLayout({
           <div className=" mt-20">{children}</div>
           <Toaster />
         </LenisProvider>
-        <div className="h-screen"></div>
+        <div className="h-[20vh]"></div>
       </body>
     </html>
   );
