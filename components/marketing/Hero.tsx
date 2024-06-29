@@ -37,7 +37,7 @@ const Hero = () => {
         <div className="mt-5 flex items-center gap-1">
           <Button size={"wide"}>
             <div className="flex items-center gap-1">
-              <div>Check Projects</div>
+              <div>our services</div>
               <div>
                 <ArrowRight size={15} />
               </div>

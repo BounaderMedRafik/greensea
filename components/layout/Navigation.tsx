@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Button } from "../ui/button";
+import { Button, buttonVariants } from "../ui/button";
 import Link from "next/link";
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import { motion } from "framer-motion";
@@ -51,8 +51,13 @@ const Navigation = () => {
         <div className="flex items-center gap-2">
           {links.map((item, i) => (
             <div key={i}>
-              <Link href={item.link}>
-                <Button variant={"link"}>{item.name}</Button>
+              <Link
+                className={buttonVariants({
+                  variant: "link",
+                })}
+                href={item.link}
+              >
+                {item.name}
               </Link>
             </div>
           ))}

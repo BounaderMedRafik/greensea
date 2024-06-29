@@ -12,7 +12,7 @@ import { Label } from "@/components/ui/label";
 import { Input } from "../ui/input";
 import { toast } from "../ui/use-toast";
 import { AnimatePresence, motion } from "framer-motion";
-import { Ban } from "lucide-react";
+import { Ban, Stars } from "lucide-react";
 import supabase from "@/app/supabase/supabaseClient";
 import { useRouter } from "next/navigation";
 
@@ -71,7 +71,7 @@ const ContactUs = () => {
       <div className="mt-10 w-full gap-3 flex items-center justify-center">
         <div>
           <Dialog>
-            <DialogTrigger>
+            <DialogTrigger asChild>
               <div
                 className={buttonVariants({
                   variant: "default",
@@ -223,7 +223,14 @@ const ContactUs = () => {
             </DialogContent>
           </Dialog>
         </div>
-        <Button variant={"white"}>another action btn</Button>
+        <Button variant={"white"}>
+          <div className=" flex items-center gap-2">
+            <div>Our services</div>
+            <div>
+              <Stars size={15} />
+            </div>
+          </div>
+        </Button>
       </div>
     </div>
   );

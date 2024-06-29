@@ -97,7 +97,7 @@ const TeamCard = ({
           <div key={i}>
             <TooltipProvider delayDuration={0.2}>
               <Tooltip>
-                <TooltipTrigger>
+                <TooltipTrigger asChild>
                   <motion.a
                     whileHover={{
                       scale: 1.1,

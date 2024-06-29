@@ -27,7 +27,7 @@ const GoUpBTN = () => {
           }}
           className="fixed z-[999] bottom-24 right-24"
         >
-          <TooltipTrigger>
+          <TooltipTrigger asChild>
             <Button onClick={scrollToTop} size={"icon"}>
               <ArrowUp />
             </Button>
