@@ -66,13 +66,10 @@ const Details = () => {
         >
           <div className="text-5xl font-LT ">Who are we?</div>
           <div className="text-xs md:text-base font-thin mt-2 ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus neque excepturi consequuntur, aliquam deserunt
-            soluta, incidunt amet dolorem, expedita et consequatur facere
-            perferendis officiis laudantium commodi ea quaerat. Voluptatibus
-            pariatur est delectus alias cum porro aliquid quis, architecto
-            debitis odit at adipisci aspernatur iste sunt, asperiores impedit
-            eveniet rem nobis.
+            Greensea is a full-service digital agency located in El Taref,
+            Algeria. We&apos;re passionate about helping businesses thrive in
+            the digital age. We offer a wide range of services to help you
+            create a strong online presence
           </div>
           <div className="mt-4">
             <div className=" flex flex-col md:grid grid-cols-3 grid-rows-3 gap-1">
