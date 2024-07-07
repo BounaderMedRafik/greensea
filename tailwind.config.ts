@@ -19,13 +19,13 @@ const config = {
     },
     extend: {
       colors: {
-        background: "#081c15",
-        text: "#e9ecef",
+        background: "#FAF9F6",
+        text: "#313131",
         primary: "#52b788",
         danger: "#d00000",
       },
       fontFamily: {
-        LT: "LT Eyesight",
+        DM: "DM Sans",
       },
       keyframes: {
         "accordion-down": {

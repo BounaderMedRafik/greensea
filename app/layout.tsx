@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navigation from "@/components/layout/Navigation";
 import LenisProvider from "@/components/providers/LenisProv";
 import { Toaster } from "@/components/ui/toaster";
 
@@ -20,14 +19,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div>
-          <Navigation />
-        </div>
+        <div></div>
         <LenisProvider>
-          <div className=" mt-20">{children}</div>
+          <div>{children}</div>
           <Toaster />
         </LenisProvider>
-        <div className="h-[20vh]"></div>
+        <div className="h-[20vh]" />
       </body>
     </html>
   );
