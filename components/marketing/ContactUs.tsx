@@ -36,7 +36,7 @@ const ContactUs = () => {
 
     console.log(name, company, PhoneNum, email);
 
-    const { data, error } = await supabase.from("clients").insert([
+    const { data, error } = await supabase.from("contacts").insert([
       {
         name,
         email,
