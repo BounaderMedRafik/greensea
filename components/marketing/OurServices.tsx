@@ -130,6 +130,15 @@ const FloatingImage = ({ x, y, image }: { x: any; y: any; image?: string }) => {
       }}
     >
       <motion.div
+        initial={{
+          rotate: 0,
+        }}
+        animate={{
+          rotate: 3,
+        }}
+        exit={{
+          rotate: 0,
+        }}
         className={
           "px-2 py-2  text-white whitespace-nowrap min-w-max text-xs rounded-lg"
         }
