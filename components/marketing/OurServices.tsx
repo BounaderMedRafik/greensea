@@ -25,7 +25,7 @@ const TheServices = [
 
 const OurServices = () => {
   return (
-    <div className=" max-w-5xl mx-auto mt-10">
+    <div className=" max-w-5xl mx-auto mt-10 border-b">
       <div className="text-9xl font-DM flex items-center gap-2 font-bold">
         <div>
           <Asterisk size={50} absoluteStrokeWidth />
@@ -98,7 +98,7 @@ const Service = ({
       <div className="text-2xl  font-DM w-[10%]">{title}</div>
       <div className="w-[50%] text-sm">{desc}</div>
       <div>
-        <div className="p-2 text-text/50 group-hover:bg-[#2e4b46] border group-hover:text-background rounded-full  transi">
+        <div className="p-2  text-text/50 group-hover:bg-[#2e4b46] border group-hover:text-background rounded-full  transi">
           <ArrowRight className=" group-hover:-rotate-45 transition-all" />
         </div>
       </div>
