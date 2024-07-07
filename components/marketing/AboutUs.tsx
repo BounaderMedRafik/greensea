@@ -22,10 +22,10 @@ const AboutUs = () => {
         <div>About Us</div>
       </div>
       <div className="  opacity-75 max-w-3xl">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis
-        deleniti ex id quis tempore saepe, a debitis accusantium. Quisquam,
-        expedita nostrum? Doloremque voluptatum officiis earum fuga eligendi
-        architecto culpa minima.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic blanditiis
+        dolore architecto id placeat. Voluptatem temporibus sit odit impedit
+        omnis mollitia cupiditate animi delectus nobis maxime sequi, alias illo
+        dignissimos!
       </div>
       <div className="border-y border-text mt-3 flex ">
         <motion.div
@@ -42,21 +42,24 @@ const AboutUs = () => {
         <div className="w-[60%] p-5 text-xl ">
           <div className="text-3xl font-bold font-DM">Who Are We?</div>
           <div className="  opacity-75">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis nobis
-            aliquid magni aliquam, dolorem error cum optio laboriosam sapiente,
-            inventore laudantium libero obcaecati voluptate dolore deserunt vero
-            quisquam. Dicta, saepe?
+            Green Sea is an innovative agency specializing in web design and
+            development, graphic design, logo design, and mobile app
+            development. We are passionate about transforming businesses through
+            digitalization, providing comprehensive solutions to help our
+            clients succeed in the digital landscape.
           </div>
         </div>
       </div>
-      <div className="border-b border-text flex ">
+      <div className="border-b border-text flex">
         <div className="w-[70%] p-5 text-xl ">
           <div className="text-3xl font-bold font-DM">What we do?</div>
           <div className="  opacity-75">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis nobis
-            aliquid magni aliquam, dolorem error cum optio laboriosam sapiente,
-            inventore laudantium libero obcaecati voluptate dolore deserunt vero
-            quisquam. Dicta, saepe?
+            At Green Sea, we offer a range of services to meet your business
+            needs. From creating visually stunning websites to designing unique
+            logos and developing user-friendly mobile applications, we have the
+            expertise to elevate your brand. Our goal is to digitize businesses,
+            enhancing their online presence and driving growth through
+            cutting-edge technology and creative design.
           </div>
         </div>
         <motion.div

@@ -56,7 +56,7 @@ const Hero = () => {
       <div className=" w-1/2 flex flex-col items-center justify-center bg-background h-full">
         <div className="text-6xl max-w-xl font-DM">
           <TextGenerateEffect
-            words={`Remake what is already been built, but in a <digital aspect/>`}
+            words={`Remake what has already been built, but in a <digital aspect/>`}
           />
         </div>
         <motion.div
@@ -69,10 +69,11 @@ const Hero = () => {
           transition={{ duration: 1, delay: 1.5 }}
           className="max-w-xl text-sm mt-3 opacity-70"
         >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus,
-          consectetur tenetur voluptatem harum itaque dolore, neque iure
-          mollitia accusamus at adipisci fuga incidunt officiis id natus
-          cupiditate ex sed maiores.
+          At Green Sea, we specialize in revitalizing existing concepts by
+          leveraging the latest in digital technology. Our mission is to enhance
+          your brand&apos;s potential through exceptional web design, graphic
+          design, logo creation, and mobile app development. Embrace the future
+          with us as we digitize and modernize your business.
         </motion.div>
         <motion.div
           initial={{
@@ -155,11 +156,11 @@ const Hero = () => {
         className="w-1/2  h-full"
       >
         <Image
-          src={"/chabiba.jpg"}
+          src={"/illustrations/pattern.svg"}
           alt="hehe"
           width={1920}
           height={1080}
-          className="object-cover"
+          className=" w-full h-full object-cover"
         />
       </motion.div>
     </div>
