@@ -104,10 +104,34 @@ const Hero = () => {
           </Button>
         </motion.div>
 
-        <div className=" max-w-xl w-full mt-5 flex items-center gap-0.5">
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{ duration: 1, delay: 3.5 }}
+          className=" max-w-xl w-full mt-5 flex items-center gap-0.5"
+        >
           {wladHomti.map((item, i) => {
             return (
-              <div key={i}>
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  y: 10,
+                }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                transition={{
+                  delay: 3,
+                  duration: 1 * i,
+                  ease: "anticipate",
+                }}
+                key={i}
+              >
                 <Chabiba
                   chab={{
                     name: item.name,
@@ -115,10 +139,10 @@ const Hero = () => {
                     link: item.link,
                   }}
                 />
-              </div>
+              </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
       <motion.div
         initial={{
@@ -211,7 +235,7 @@ const Chabiba = ({
                 src={chab.picture}
                 className=" h-full w-full object-cover "
               />
-              <div className=" absolute opacity-0 group-hover:opacity-100 transition-all z-50 top-0 left-0 w-full h-full flex items-center justify-center bg-text/50 backdrop-blur-sm rounded-lg text-background">
+              <div className=" absolute opacity-0 group-hover:opacity-100 transition-all z-50 top-0 left-0 w-full h-full flex items-center justify-center bg-text/80 backdrop-blur-sm rounded-lg text-background">
                 <ArrowUpRight size={15} />
               </div>
             </div>

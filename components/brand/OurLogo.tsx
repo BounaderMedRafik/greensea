@@ -11,29 +11,31 @@ const OurLogo = ({
   labeled?: boolean;
 }) => {
   return (
-    <div className="px-5 py-1">
-      <div className="flex items-center gap-3">
-        {" "}
-        <img
-          className={cn(" w-12", LogoClassName)}
-          src={
-            variant == "colored"
-              ? "/logos/coloredLogo.png"
-              : variant == "black"
-              ? "/logos/blackLogo.png"
-              : variant == "white"
-              ? "/logos/whiteLogo.png"
-              : "/logos/whiteLogo.png"
-          }
-          alt=""
-        />
-        {labeled ? (
-          <div>
-            GreenSea <span className="text-xs">2024</span>
-          </div>
-        ) : null}
+    <a href="/">
+      <div className="px-5 py-1">
+        <div className="flex items-center gap-3">
+          {" "}
+          <img
+            className={cn(" w-8", LogoClassName)}
+            src={
+              variant == "colored"
+                ? "/logos/coloredLogo.png"
+                : variant == "black"
+                ? "/logos/blackLogo.png"
+                : variant == "white"
+                ? "/logos/whiteLogo.png"
+                : "/logos/whiteLogo.png"
+            }
+            alt=""
+          />
+          {labeled ? (
+            <div>
+              GreenSea <span className="text-xs">2024</span>
+            </div>
+          ) : null}
+        </div>
       </div>
-    </div>
+    </a>
   );
 };
 

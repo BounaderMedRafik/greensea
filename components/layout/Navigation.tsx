@@ -2,6 +2,7 @@ import React from "react";
 import OurLogo from "../brand/OurLogo";
 import { Button, buttonVariants } from "../ui/button";
 import { ArrowUpRight, ListStartIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
 const links = [
   {
@@ -19,9 +20,9 @@ const links = [
 ];
 const Navigation = () => {
   return (
-    <div className=" fixed px-10 z-50 w-full left-1/2 -translate-x-1/2 wrapper rounded-2xl border border-slate-300 bg-background flex items-center justify-between mt-10 shadow-2xl shadow-black/10">
+    <motion.div className=" fixed  z-50 w-full left-1/2 -translate-x-1/2  max-w-5xl p-3 rounded-2xl border border-slate-300 bg-background flex items-center justify-between mt-10 shadow-2xl shadow-black/10">
       <div>
-        <OurLogo variant={"colored"} />
+        <OurLogo variant={"black"} />
       </div>
       <div className="flex items-center">
         {links.map((item, i) => {
@@ -52,7 +53,7 @@ const Navigation = () => {
           </div>
         </Button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

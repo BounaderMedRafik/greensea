@@ -1,6 +1,7 @@
 "use client";
 import GoUpBTN from "@/components/layout/GoUpBTN";
 import Navigation from "@/components/layout/Navigation";
+import AboutUs from "@/components/marketing/AboutUs";
 import Hero from "@/components/marketing/Hero";
 
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -19,6 +20,12 @@ export default function Home() {
       </div>
       <div>
         <Hero />
+      </div>
+      <div>
+        <AboutUs />
+      </div>
+      <div>
+        <GoUpBTN />
       </div>
     </main>
   );
