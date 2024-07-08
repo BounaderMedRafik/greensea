@@ -20,7 +20,7 @@ const links = [
 ];
 const Navigation = () => {
   return (
-    <motion.div className=" fixed  z-50 w-full left-1/2 -translate-x-1/2  max-w-5xl p-3 rounded-2xl border border-slate-300 bg-background flex items-center justify-between mt-10 shadow-2xl shadow-black/10">
+    <motion.div className=" fixed w-[90%]  z-50 left-1/2 -translate-x-1/2  max-w-5xl p-3 rounded-2xl border border-slate-300 bg-background flex items-center justify-between mt-3 shadow-2xl shadow-black/10">
       <div>
         <OurLogo variant={"black"} />
       </div>

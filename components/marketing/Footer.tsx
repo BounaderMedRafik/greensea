@@ -69,11 +69,8 @@ const Footer = () => {
         <div className=" font-DM text-xs">All Rights Reserved 2024©</div>
         <div className=" font-DM flex flex-col justify-center items-end">
           {ourContacts.map((item, i) => (
-            <a href={item.link} target="_blank">
-              <div
-                key={i}
-                className="flex  opacity-75 items-center gap-2 p-2 hover:opacity-100"
-              >
+            <a key={i} href={item.link} target="_blank">
+              <div className="flex  opacity-75 items-center gap-2 p-2 hover:opacity-100">
                 <div>{item.icon}</div>
                 <div className="">{item.name}</div>
               </div>

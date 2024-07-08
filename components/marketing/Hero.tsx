@@ -20,10 +20,6 @@ import {
 } from "../ui/tooltip";
 const Hero = () => {
   const ref = useRef(null);
-  const { scrollY } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
 
   const wladHomti = [
     {
@@ -53,7 +49,7 @@ const Hero = () => {
       ref={ref}
       className="m-5 relative overflow-hidden rounded-2xl flex h-[95vh] "
     >
-      <div className=" w-1/2 flex flex-col items-center justify-center bg-background h-full">
+      <div className=" md:w-1/2 w-full flex flex-col items-center justify-center bg-background h-full">
         <div className="text-6xl max-w-xl font-DM">
           <TextGenerateEffect
             words={`Remake what has already been built, but in a <digital aspect/>`}
@@ -153,7 +149,7 @@ const Hero = () => {
           opacity: 1,
         }}
         transition={{ duration: 1, delay: 1 }}
-        className="w-1/2  h-full"
+        className="w-1/2 block   h-full"
       >
         <Image
           src={"/illustrations/pattern.svg"}

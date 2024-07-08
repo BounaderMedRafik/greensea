@@ -1,0 +1,81 @@
+import OurLogo from "@/components/brand/OurLogo";
+import { Button } from "@/components/ui/button";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerFooter,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import { ArrowRight, ChevronDown, Ellipsis, X } from "lucide-react";
+import React from "react";
+
+const links = [
+  {
+    name: "About",
+    linkto: "/#services",
+  },
+  {
+    name: "services",
+    linkto: "/#services",
+  },
+  {
+    name: "contacts",
+    linkto: "/#contacts",
+  },
+];
+
+const NavigationMobile = () => {
+  return (
+    <div className="px-10 py-5 flex items-center justify-between border-b">
+      <div>
+        <OurLogo variant="black" />
+      </div>
+      <div>
+        <Drawer>
+          <DrawerTrigger asChild>
+            <Button size={"icon"} variant={"white"}>
+              <ChevronDown size={18} />
+            </Button>
+          </DrawerTrigger>
+          <DrawerContent>
+            <DrawerTitle>Navigation</DrawerTitle>
+            <div className="text-sm max-w-xs mt-1 opacity-75">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga eum
+              odio repellendus!
+            </div>
+            <div className=" w-full h-px bg-neutral-200 my-3" />
+            <div>
+              {links.map((item, i) => (
+                <div key={i}>
+                  <div className="flex items-center justify-between py-3 hover:bg-neutral-100 ">
+                    <div>{item.name}</div>
+                    <div>
+                      <ArrowRight size={15} />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <DrawerFooter>
+              <DrawerClose>
+                <Button variant={"white"}>
+                  <div className="flex items-center gap-2">
+                    <div>Close</div>
+                    <div>
+                      <X size={15} />
+                    </div>
+                  </div>
+                </Button>
+              </DrawerClose>
+            </DrawerFooter>
+          </DrawerContent>
+        </Drawer>
+      </div>
+    </div>
+  );
+};
+
+export default NavigationMobile;

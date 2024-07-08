@@ -96,7 +96,7 @@ const Service = ({
       onMouseLeave={handleMouseLeave}
       onMouseEnter={handleMouseEnter}
       onMouseMove={handleMouseMove}
-      className="py-4  relative cursor-none  hover:bg-neutral-100  transition-all group flex justify-between items-center"
+      className="py-4  relative  cursor-default  hover:bg-neutral-100  transition-all group flex justify-between items-center"
     >
       <div className="text-2xl  font-DM w-[10%]">{title}</div>
       <div className="w-[50%] text-sm">{desc}</div>
@@ -148,7 +148,7 @@ const FloatingImage = ({ x, y, image }: { x: any; y: any; image?: string }) => {
       >
         <img
           src={image}
-          className=" h-64 aspect-video object-cover  rounded-lg -translate-x-1/2 -translate-y-1/2"
+          className=" h-64 aspect-video object-cover  rounded-lg "
         />
       </motion.div>
     </motion.div>
