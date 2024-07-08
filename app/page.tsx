@@ -5,6 +5,7 @@ import AboutUs from "@/components/marketing/AboutUs";
 import ContactUs from "@/components/marketing/ContactUs";
 import Footer from "@/components/marketing/Footer";
 import Hero from "@/components/marketing/Hero";
+import HeroMobile from "@/components/marketing/mobile/HeroMobile";
 import NavigationMobile from "@/components/marketing/mobile/NavigationMobile";
 import OurServices from "@/components/marketing/OurServices";
 export default function Home() {
@@ -34,7 +35,12 @@ export default function Home() {
         </div>
       </main>
       <main className=" block md:hidden">
-        <NavigationMobile />
+        <div>
+          <NavigationMobile />
+        </div>
+        <div>
+          <HeroMobile />
+        </div>
       </main>
     </>
   );

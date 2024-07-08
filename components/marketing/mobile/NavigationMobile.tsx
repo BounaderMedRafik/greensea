@@ -8,7 +8,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { ArrowRight, ChevronDown, Ellipsis, X } from "lucide-react";
+import { ArrowRight, ChevronDown, Ellipsis, Menu, X } from "lucide-react";
 import React from "react";
 
 const links = [
@@ -36,7 +36,7 @@ const NavigationMobile = () => {
         <Drawer>
           <DrawerTrigger asChild>
             <Button size={"icon"} variant={"white"}>
-              <ChevronDown size={18} />
+              <Menu size={18} />
             </Button>
           </DrawerTrigger>
           <DrawerContent>
@@ -49,12 +49,14 @@ const NavigationMobile = () => {
             <div>
               {links.map((item, i) => (
                 <div key={i}>
-                  <div className="flex items-center justify-between py-3 hover:bg-neutral-100 ">
-                    <div>{item.name}</div>
-                    <div>
-                      <ArrowRight size={15} />
+                  <a href={item.linkto}>
+                    <div className="flex items-center justify-between py-3 hover:bg-neutral-100 ">
+                      <div>{item.name}</div>
+                      <div>
+                        <ArrowRight size={15} />
+                      </div>
                     </div>
-                  </div>
+                  </a>
                 </div>
               ))}
             </div>
