@@ -28,7 +28,7 @@ const links = [
 
 const NavigationMobile = () => {
   return (
-    <div className="px-10 py-5 flex items-center justify-between border-b">
+    <div className="px-10 fixed z-40 w-full bg-background py-5 flex items-center justify-between border-b">
       <div>
         <OurLogo variant="black" />
       </div>

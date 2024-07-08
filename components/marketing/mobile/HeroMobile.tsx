@@ -223,7 +223,7 @@ const Chabiba = ({
       <TooltipProvider delayDuration={50}>
         <Tooltip>
           <TooltipTrigger>
-            <div className="size-24 relative rounded-xl   overflow-hidden border-4 border-text transition-all group">
+            <div className="size-20 relative rounded-xl   overflow-hidden border-4 border-text transition-all group">
               <img
                 src={chab.picture}
                 className=" h-full w-full object-cover "
