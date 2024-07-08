@@ -8,6 +8,7 @@ import {
 import { cn } from "@/lib/utils";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { ArrowRight, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import React, { useEffect } from "react";
 
 const wladHomti = [
@@ -68,7 +69,7 @@ const HeroMobile = () => {
                 y: 0,
               }}
               transition={{ duration: 1, delay: 2.5, ease: "anticipate" }}
-              className="mt-5 flex items-center justify-center gap-2 justify-start w-full  max-w-xl"
+              className="mt-5 flex items-center justify-center gap-2  w-full  max-w-xl"
             >
               <Button>
                 <div className="flex items-center gap-2">
@@ -133,6 +134,26 @@ const HeroMobile = () => {
             })}
           </motion.div>
         </div>
+      </div>
+      <div>
+        <motion.div
+          initial={{
+            opacity: 0,
+          }}
+          animate={{
+            opacity: 1,
+          }}
+          transition={{ duration: 1, delay: 1 }}
+          className="w-full rounded-xl overflow-hidden mt-3 block   h-full"
+        >
+          <Image
+            src={"/illustrations/pattern.svg"}
+            alt="hehe"
+            width={1920}
+            height={1080}
+            className=" w-full h-full object-cover"
+          />
+        </motion.div>
       </div>
     </div>
   );
