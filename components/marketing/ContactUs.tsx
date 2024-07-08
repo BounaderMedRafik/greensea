@@ -2,7 +2,9 @@ import {
   ArrowRight,
   Asterisk,
   Briefcase,
+  ChevronDown,
   Info,
+  Loader,
   Mail,
   UserRound,
 } from "lucide-react";
@@ -18,6 +20,13 @@ import {
 } from "../ui/select";
 import { Textarea } from "../ui/textarea";
 import { Button } from "../ui/button";
+import supabase from "@/app/supabase/supabaseClient";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
 
 const ContactUs = () => {
   return (
@@ -29,10 +38,10 @@ const ContactUs = () => {
         <div>Contact Us</div>
       </div>
       <div className="  opacity-75 max-w-3xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic blanditiis
-        dolore architecto id placeat. Voluptatem temporibus sit odit impedit
-        omnis mollitia cupiditate animi delectus nobis maxime sequi, alias illo
-        dignissimos!
+        We&apos;d love to hear from you! Whether you have a question, need a
+        quote, or are excited to start your next project, the Green Sea team is
+        here to help. Reach out to us by phone, email, or fill out our contact
+        form. Let&apos;s chat and create something amazing together!
       </div>
 
       <div className="">
@@ -45,8 +54,53 @@ const ContactUs = () => {
 const Form = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
+  const [subject, setSubject] = useState("Design Branding");
   const [details, setDetails] = useState("");
+  // ---
+  const [isLoading, setIsLoading] = useState(false);
+  const [succ, setIsSucc] = useState(false);
+  const [error, setIsError] = useState(false);
+
+  const uploadContact = async () => {
+    setIsLoading(true);
+    setIsSucc(false);
+    setIsError(false);
+
+    if (!name || !email || !subject || !details) {
+      setIsError(true);
+      setIsLoading(false);
+      console.log("yal9lawi u have nth");
+      console.log(
+        "name: " +
+          name +
+          " email: " +
+          email +
+          " subject: " +
+          subject +
+          "details: " +
+          details
+      );
+      return;
+    }
+
+    const { data, error } = await supabase.from("contacts").insert({
+      name: name,
+      email: email,
+      subject: subject,
+      details: details,
+    });
+
+    if (error) {
+      console.log("error");
+      setIsError(true);
+      setIsLoading(false);
+    } else {
+      console.log("succ");
+      setIsSucc(true);
+      setIsLoading(false);
+    }
+  };
+
   return (
     <div className="w-full flex items-start mt-5 ">
       <div className="w-1/2 h-full">
@@ -105,43 +159,48 @@ const Form = () => {
                 <div>Subject</div>
               </div>
             </Label>
-            <Select>
-              <SelectTrigger className="mt-2">
-                <SelectValue placeholder="choose a subject u interested in" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem
-                  value="design-brands"
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button className="w-full bg-white text-text border border-neutral-300 flex justify-start items-start">
+                  <div className="flex items-center justify-between w-full">
+                    <div>{subject}</div>
+                    <div>
+                      <ChevronDown size={15} />
+                    </div>
+                  </div>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuItem
                   onClick={() => {
-                    setSubject("Design Brands");
+                    setSubject("Design Branding");
                   }}
                 >
-                  Design Brands
-                </SelectItem>
-                <SelectItem
-                  onClick={() => setSubject("Software Developpment")}
-                  value="software-development"
+                  Design Branding
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => {
+                    setSubject("Software Developpment");
+                  }}
                 >
                   Software Developpment
-                </SelectItem>
-                <SelectItem
+                </DropdownMenuItem>
+                <DropdownMenuItem
                   onClick={() => {
                     setSubject("Marketing");
                   }}
-                  value="marketing"
                 >
                   Marketing
-                </SelectItem>
-                <SelectItem
+                </DropdownMenuItem>
+                <DropdownMenuItem
                   onClick={() => {
                     setSubject("Other");
                   }}
-                  value="other"
                 >
                   Other
-                </SelectItem>
-              </SelectContent>
-            </Select>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
           <div className="mt-4">
             <Label>
@@ -161,15 +220,31 @@ const Form = () => {
               className="w-full mt-2 font-DM"
             />
           </div>
+          {succ ? (
+            <div className=" text-green-900 text-xs my-5">
+              We have recieved your contact demand, you will be redirected soon
+            </div>
+          ) : null}
+
+          {error ? (
+            <div className=" text-red-500 text-xs my-5">
+              please fill out all the necessary information
+            </div>
+          ) : null}
+
           <div className="mt-5">
-            <Button>
-              <div className="flex items-center gap-2">
-                <div>Send Now</div>
-                <div>
-                  {" "}
-                  <ArrowRight size={15} />
+            <Button onClick={uploadContact}>
+              {isLoading ? (
+                <Loader className=" animate-spin" size={15} />
+              ) : (
+                <div className="flex items-center gap-2">
+                  <div>Send Now</div>
+                  <div>
+                    {" "}
+                    <ArrowRight size={15} />
+                  </div>
                 </div>
-              </div>
+              )}
             </Button>
           </div>
         </div>

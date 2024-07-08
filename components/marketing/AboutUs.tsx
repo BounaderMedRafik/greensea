@@ -21,12 +21,7 @@ const AboutUs = () => {
         </div>{" "}
         <div>About Us</div>
       </div>
-      <div className="  opacity-75 max-w-3xl">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic blanditiis
-        dolore architecto id placeat. Voluptatem temporibus sit odit impedit
-        omnis mollitia cupiditate animi delectus nobis maxime sequi, alias illo
-        dignissimos!
-      </div>
+      <div className="  opacity-75 max-w-3xl"></div>
       <div className="border-y border-text mt-3 flex ">
         <motion.div
           style={{
