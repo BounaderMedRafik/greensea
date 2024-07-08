@@ -5,6 +5,7 @@ import AboutUs from "@/components/marketing/AboutUs";
 import ContactUs from "@/components/marketing/ContactUs";
 import Footer from "@/components/marketing/Footer";
 import Hero from "@/components/marketing/Hero";
+import AboutUsMobile from "@/components/marketing/mobile/AboutUsMobile";
 import HeroMobile from "@/components/marketing/mobile/HeroMobile";
 import NavigationMobile from "@/components/marketing/mobile/NavigationMobile";
 import OurServices from "@/components/marketing/OurServices";
@@ -40,6 +41,9 @@ export default function Home() {
         </div>
         <div>
           <HeroMobile />
+        </div>
+        <div>
+          <AboutUsMobile />
         </div>
       </main>
     </>

@@ -21,7 +21,7 @@ const AboutUs = () => {
         </div>{" "}
         <div>About Us</div>
       </div>
-      <div className="  opacity-75 max-w-3xl"></div>
+
       <div className="border-y border-text mt-3 flex ">
         <motion.div
           style={{
