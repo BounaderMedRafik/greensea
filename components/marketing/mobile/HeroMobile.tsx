@@ -36,7 +36,7 @@ const wladHomti = [
 
 const HeroMobile = () => {
   return (
-    <div className="p-5">
+    <div className="p-5 pt-28">
       <div>
         <div className=" max-w-xl font-DM text-center">
           <TextGenerateEffect

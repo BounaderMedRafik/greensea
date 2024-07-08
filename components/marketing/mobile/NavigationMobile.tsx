@@ -8,7 +8,14 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { ArrowRight, ChevronDown, Ellipsis, Menu, X } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  ChevronDown,
+  Ellipsis,
+  Menu,
+  X,
+} from "lucide-react";
 import React from "react";
 
 const links = [
