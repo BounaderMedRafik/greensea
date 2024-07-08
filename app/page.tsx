@@ -8,6 +8,7 @@ import Hero from "@/components/marketing/Hero";
 import AboutUsMobile from "@/components/marketing/mobile/AboutUsMobile";
 import HeroMobile from "@/components/marketing/mobile/HeroMobile";
 import NavigationMobile from "@/components/marketing/mobile/NavigationMobile";
+import OurServicesMobile from "@/components/marketing/mobile/OurServicesMobile";
 import OurServices from "@/components/marketing/OurServices";
 export default function Home() {
   return (
@@ -44,6 +45,9 @@ export default function Home() {
         </div>
         <div>
           <AboutUsMobile />
+        </div>
+        <div>
+          <OurServicesMobile />
         </div>
       </main>
     </>

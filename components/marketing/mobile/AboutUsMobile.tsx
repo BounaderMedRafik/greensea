@@ -6,7 +6,7 @@ const AboutUsMobile = () => {
     <div className="p-5">
       <div>
         <div>
-          <div className="text-4xl font-DM flex items-center gap-2 font-bold">
+          <div className="text-5xl font-DM flex items-center gap-2 font-bold">
             <div>
               <Asterisk size={50} absoluteStrokeWidth />
             </div>{" "}
