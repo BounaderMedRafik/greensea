@@ -84,10 +84,10 @@ const ContactUsMobile = () => {
           <div>Contact Us</div>
         </div>
         <div className="text-xs opacity-75 max-w-md">
-          We'd love to hear from you! Whether you have a question, need a quote,
-          or are excited to start your next project, the Green Sea team is here
-          to help. Reach out to us by phone, email, or fill out our contact
-          form. Let's chat and create something amazing together!
+          We&apos;d love to hear from you! Whether you have a question, need a
+          quote, or are excited to start your next project, the Green Sea team
+          is here to help. Reach out to us by phone, email, or fill out our
+          contact form. Let&apos;s chat and create something amazing together!
         </div>
       </div>
       <div className="w-full">
