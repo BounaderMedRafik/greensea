@@ -41,7 +41,7 @@ const NavigationMobile = () => {
       </div>
       <div>
         <Drawer>
-          <DrawerTrigger asChild>
+          <DrawerTrigger className="hover:shadow-xl transition-all" asChild>
             <Button size={"icon"} variant={"white"}>
               <Menu size={18} />
             </Button>

@@ -6,6 +6,8 @@ import ContactUs from "@/components/marketing/ContactUs";
 import Footer from "@/components/marketing/Footer";
 import Hero from "@/components/marketing/Hero";
 import AboutUsMobile from "@/components/marketing/mobile/AboutUsMobile";
+import ContactUsMobile from "@/components/marketing/mobile/ContactUsMobile";
+import FooterMobile from "@/components/marketing/mobile/FooterMobile";
 import HeroMobile from "@/components/marketing/mobile/HeroMobile";
 import NavigationMobile from "@/components/marketing/mobile/NavigationMobile";
 import OurServicesMobile from "@/components/marketing/mobile/OurServicesMobile";
@@ -48,6 +50,12 @@ export default function Home() {
         </div>
         <div>
           <OurServicesMobile />
+        </div>
+        <div>
+          <ContactUsMobile />
+        </div>
+        <div>
+          <FooterMobile />
         </div>
       </main>
     </>

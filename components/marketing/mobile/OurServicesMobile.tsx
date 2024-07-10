@@ -37,6 +37,15 @@ const OurServicesMobile = () => {
         </div>{" "}
         <div>Our services</div>
       </div>
+      <div className="text-xs opacity-75 max-w-md">
+        At Green Sea, we offer a comprehensive suite of services designed to
+        elevate your business and drive success in the digital world. Our
+        expertise spans across design branding, software development, and
+        marketing, ensuring that we provide holistic solutions tailored to your
+        unique needs. Whether you need a compelling brand identity, cutting-edge
+        software, or strategic marketing campaigns, our team is dedicated to
+        delivering exceptional results that help your business thrive.
+      </div>
 
       <div className="mt-3">
         <Accordion type="single">
