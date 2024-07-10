@@ -33,36 +33,20 @@ const ContactUsMobile = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [succ, setIsSucc] = useState(false);
   const [error, setIsError] = useState(false);
-
   const uploadContact = async () => {
     setIsLoading(true);
     setIsSucc(false);
     setIsError(false);
-
     if (!name || !email || !subject || !details) {
       setIsError(true);
       setIsLoading(false);
-      console.log("yal9lawi u have nth");
-      console.log(
-        "name: " +
-          name +
-          " email: " +
-          email +
-          " subject: " +
-          subject +
-          "details: " +
-          details
-      );
-      return;
     }
-
     const { data, error } = await supabase.from("contacts").insert({
       name: name,
       email: email,
       subject: subject,
       details: details,
     });
-
     if (error) {
       console.log("error");
       setIsError(true);
@@ -73,7 +57,6 @@ const ContactUsMobile = () => {
       setIsLoading(false);
     }
   };
-
   return (
     <div className="p-5">
       <div>
